@@ -7,10 +7,12 @@
     display: grid;
     grid-template:
     "header search"
-    "chats chats";
+    "chats chats"
+    "forward forward"
+    "fwd-btn fwd-btn";
 
     grid-template-columns: 30% 70%;
-    grid-template-rows: 50px auto;
+    grid-template-rows: 50px auto min-content min-content;
     align-items: center;
 }
 
@@ -40,28 +42,93 @@
 .bp_TitleBar ~ .mx_MatrixChat > div:nth-child(1) > div:nth-child(1) {
     position: absolute;
     top: 8px;
+    left: 8px;
+    z-index: 2;
+}
+/* Align Chat app sidebar */
+.bp_TitleBar ~ .mx_MatrixChat > div:nth-child(1) > div:nth-child(2) {
+    margin-top: 8px;
 }
 
 /* Remove padding if sidebar is open */
 div.noselect:first-of-type:not([class$="noselect"]) ~ .bp_LeftPanel > div:nth-child(1) {
     padding: 0;
-    transition: padding 0.1s linear;
+    transition: all 0.1s linear;
 }
 
 /* Add margin if sidebar is closed */
 div.noselect:first-of-type[class$="noselect"] ~ .bp_LeftPanel > div:nth-child(1) {
     margin-left: 33px;
-    transition: margin-left .1s linear;
+    transition: all .1s linear;
 }
 
 /* Set min width for side panel */
 /* Prevents searchbar getting smushed */
 .bp_LeftPanel {
-    min-width: 350;
+    min-width: 350px;
+    container-type: inline-size;
 }
 
 /* Searchbar & Pen icon */
 .bp_LeftPanel > *:nth-child(2) {
-    width:auto;
+    width: auto;
+    margin-left: -3cqw;
+    transition: all .2s linear;
+}
 
+/* Resize by Container */
+@container (min-width: 375px) {
+    .bp_LeftPanel > *:nth-child(2) {
+        margin-left: -4cqw;
+    }
+}
+
+@container (min-width: 400px) {
+    .bp_LeftPanel > *:nth-child(2) {
+        margin-left: -7cqw;
+    }
+}
+
+@container (min-width: 450px) {
+    .bp_LeftPanel > *:nth-child(2) {
+        margin-left: -10cqw;
+    }
+}
+
+@container (min-width: 500px) {
+    .bp_LeftPanel > *:nth-child(2) {
+        margin-left: -14cqw;
+    }
+}
+
+/* Fix Forwarding menu*/
+
+.bp_Header + div > p {
+    display: none !important;
+}
+
+.bp_Header:has(+ div p) {
+    margin-left: 6.66px !important;
+}
+
+.bp_LeftPanel > *:nth-child(4){
+    display: flex;
+    grid-area: forward;
+    min-height: fit-content;
+    min-width: auto;
+    grid-column: 1 / 3;
+    grid-row: 3;
+}
+
+.bp_LeftPanel > *:nth-child(5) {
+    display: flex;
+    grid-area: fwd-btn;
+    min-height: fit-content;
+    min-width: auto;
+    grid-column: 1 / 3;
+    grid-row: 4;
+}
+
+.bp_LeftPanel_contentWrapper--search {
+    --offset: -98% !important;
 }
