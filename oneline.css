@@ -1,0 +1,47 @@
+/* 
+   Code below was created by TGRush and is used under the GPL-3 License
+   https://codeberg.org/TGRush/beeper-tweaks/src/branch/main/header-online.css
+*/
+
+.bp_LeftPanel {
+    display: grid;
+    grid-template:
+    "header search"
+    "chats chats";
+
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 50px auto;
+    align-items: center;
+}
+
+/* Help, Settings, DND Header */
+.bp_LeftPanel > *:nth-child(1) {
+    width: fit-content;
+    height: min-content;
+    grid-area: header;
+    align-self: start;
+}
+
+/* Searchbar & Pen icon */
+.bp_LeftPanel > *:nth-child(2) {
+    width: fit-content;
+    height: min-content;
+    grid-area: search;
+}
+
+/* Chats (favorites and inbox) */
+.bp_LeftPanel > *:nth-child(3) {
+    grid-area: chats;
+}
+
+/* My code again */
+
+.bp_TitleBar ~ .mx_MatrixChat > div:nth-child(1) > div:nth-child(1) {
+    position: absolute;
+    top: 8px;
+    color: var(--nord-text-dark)
+}
+ 
+._28FdE3WpVf_zpleg-ND585:not(._2weaycFWA0afTUnVdHvIxI) ~ .bp_LeftPanel > div:nth-child(1) {
+    margin-left: 32px;
+}
