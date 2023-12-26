@@ -34,14 +34,34 @@
     grid-area: chats;
 }
 
-/* My code again */
+/* My code */
 
+/* Set icon to stay in one place */
 .bp_TitleBar ~ .mx_MatrixChat > div:nth-child(1) > div:nth-child(1) {
     position: absolute;
     top: 8px;
-    color: var(--nord-text-dark)
 }
- 
-._28FdE3WpVf_zpleg-ND585:not(._2weaycFWA0afTUnVdHvIxI) ~ .bp_LeftPanel > div:nth-child(1) {
-    margin-left: 32px;
+
+/* Remove padding if sidebar is open */
+div.noselect:first-of-type:not([class$="noselect"]) ~ .bp_LeftPanel > div:nth-child(1) {
+    padding: 0;
+    transition: padding 0.1s linear;
+}
+
+/* Add margin if sidebar is closed */
+div.noselect:first-of-type[class$="noselect"] ~ .bp_LeftPanel > div:nth-child(1) {
+    margin-left: 33px;
+    transition: margin-left .1s linear;
+}
+
+/* Set min width for side panel */
+/* Prevents searchbar getting smushed */
+.bp_LeftPanel {
+    min-width: 350;
+}
+
+/* Searchbar & Pen icon */
+.bp_LeftPanel > *:nth-child(2) {
+    width:auto;
+
 }
