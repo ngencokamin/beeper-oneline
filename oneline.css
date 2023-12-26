@@ -42,6 +42,11 @@
     top: 8px;
 }
 
+/* Align Chat app sidebar */
+.bp_TitleBar ~ .mx_MatrixChat > div:nth-child(1) > div:nth-child(2) {
+    margin-top: 8px;
+}
+
 /* Remove padding if sidebar is open */
 div.noselect:first-of-type:not([class$="noselect"]) ~ .bp_LeftPanel > div:nth-child(1) {
     padding: 0;
@@ -57,11 +62,10 @@ div.noselect:first-of-type[class$="noselect"] ~ .bp_LeftPanel > div:nth-child(1)
 /* Set min width for side panel */
 /* Prevents searchbar getting smushed */
 .bp_LeftPanel {
-    min-width: 350;
+    min-width: 350px;
 }
 
 /* Searchbar & Pen icon */
 .bp_LeftPanel > *:nth-child(2) {
     width:auto;
-
 }
