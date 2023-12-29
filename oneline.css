@@ -129,7 +129,7 @@ div.noselect:first-of-type[class$="noselect"] ~ .bp_LeftPanel > div:nth-child(1)
     grid-row: 4;
 }
 
-.bp_LeftPanel_contentWrapper--search {
+.bp_LeftPanel:has(div:nth-child(4) > * > .mx_EventTile_messageOut) > *:nth-child(2) ~ .bp_LeftPanel_contentWrapper--search {
     --offset: -98% !important;
 }
 
