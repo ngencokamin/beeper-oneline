@@ -138,3 +138,7 @@ div.noselect:first-of-type[class$="noselect"] ~ .bp_LeftPanel > div:nth-child(1)
     padding: 5px;
     width: 30px;
 }
+
+.bp_TitleBar ~ .mx_MatrixChat > div:nth-child(1) > div:nth-child(1) {
+    width:35px;
+}
