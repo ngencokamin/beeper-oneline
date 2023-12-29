@@ -4,7 +4,7 @@ Fixes for Beeper Cloud desktop client to place top elements on one line
 
 ## Description
 
-Builds on [placeholder]'s tweaks to fix issues with sidebar expansion when using CSS to make beeper top bar one line
+Builds on [TGRush](https://codeberg.org/TGRush)'s tweaks to fix issues with sidebar expansion and add functionality when using CSS to make beeper top bar one line
 
 ## Inspiration
 
