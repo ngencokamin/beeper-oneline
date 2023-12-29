@@ -34,6 +34,21 @@
     grid-area: chats;
 }
 
+.bp_LeftPanel:has(div:nth-child(4) > * > .mx_EventTile_messageOut) {
+    display: grid;
+    grid-template:
+        "header search"
+        "chats chats"
+        ". .";
+    grid-template-columns: fit-content 70%;
+    grid-template-rows: 50px auto min-content;
+}
+
+/* "Forward Message" text */
+.bp_Header + div > p {
+    display: none;
+}
+
 /* My code */
 
 /* Set icon to stay in one place */
