@@ -7,12 +7,10 @@
     display: grid;
     grid-template:
     "header search"
-    "chats chats"
-    "forward forward"
-    "fwd-btn fwd-btn";
+    "chats chats";
 
     grid-template-columns: 30% 70%;
-    grid-template-rows: 50px auto min-content min-content;
+    grid-template-rows: 50px auto;
     align-items: center;
 }
 
@@ -51,6 +49,11 @@
     display: none;
 }
 
+/* Fix Forwarding menu*/
+.bp_LeftPanel:has(div:nth-child(4) > * > .mx_EventTile_messageOut) > *:nth-child(2) ~ .bp_LeftPanel_contentWrapper--search {
+    --offset: -98% !important;
+}
+
 /* My code */
 
 /* Set icon to stay in one place */
@@ -60,21 +63,22 @@
     left: 12px;
     z-index: 2;
 }
-/* Align Chat app sidebar */
-.bp_TitleBar ~ .mx_MatrixChat > div:nth-child(1) > div:nth-child(2) {
-    margin-top: 8px;
-}
 
 /* Remove padding if sidebar is open */
 div.noselect:first-of-type:not([class$="noselect"]) ~ .bp_LeftPanel > div:nth-child(1) {
     padding: 0;
-    transition: all 0.1s linear;
+    transition: padding 0.1s linear;
 }
 
 /* Add margin if sidebar is closed */
 div.noselect:first-of-type[class$="noselect"] ~ .bp_LeftPanel > div:nth-child(1) {
     margin-left: 33px;
-    transition: all .1s linear;
+    transition: margin-left .1s linear;
+}
+
+/* Align Chat app sidebar */
+.bp_TitleBar ~ .mx_MatrixChat > div:nth-child(1) > div:nth-child(2) {
+    margin-top: 8px;
 }
 
 /* Set min width for side panel */
@@ -114,38 +118,6 @@ div.noselect:first-of-type[class$="noselect"] ~ .bp_LeftPanel > div:nth-child(1)
     .bp_LeftPanel > *:nth-child(2) {
         margin-left: -14cqw;
     }
-}
-
-/* Fix Forwarding menu*/
-
-.bp_Header + div > p {
-    display: none !important;
-}
-
-.bp_Header:has(+ div p) {
-    margin-left: 6.66px !important;
-}
-
-.bp_LeftPanel > *:nth-child(4){
-    display: flex;
-    grid-area: forward;
-    min-height: fit-content;
-    min-width: auto;
-    grid-column: 1 / 3;
-    grid-row: 3;
-}
-
-.bp_LeftPanel > *:nth-child(5) {
-    display: flex;
-    grid-area: fwd-btn;
-    min-height: fit-content;
-    min-width: auto;
-    grid-column: 1 / 3;
-    grid-row: 4;
-}
-
-.bp_LeftPanel:has(div:nth-child(4) > * > .mx_EventTile_messageOut) > *:nth-child(2) ~ .bp_LeftPanel_contentWrapper--search {
-    --offset: -98% !important;
 }
 
 /* Fix Chat App menu button */
