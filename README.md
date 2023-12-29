@@ -19,8 +19,8 @@ Install Beeper Cloud desktop app for your OS
 ### Usage
 
 1. Navigate to settings in Beeper Cloud desktop client
-2. Click the "appearance" tab
-3. Paste code from `oneline.css` file in the custom CSS text field
+2. Click the **![](https://i.ibb.co/y5jFp49/path2.png) Appearance** tab
+3. Paste the code from `oneline.css` in the Custom CSS text field
 
 ## Contributors
 
