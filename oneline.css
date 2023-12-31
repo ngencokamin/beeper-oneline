@@ -81,6 +81,7 @@ div.noselect:first-of-type[class$="noselect"] ~ .bp_LeftPanel > div:nth-child(1)
 .bp_LeftPanel {
     min-width: 350px;
     container-type: inline-size;
+
 }
 
 /* Searchbar & Pen icon */
