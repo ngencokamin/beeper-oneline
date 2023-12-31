@@ -49,7 +49,7 @@
     display: none;
 }
 
-/* Fix Forwarding menu*/
+/* Align skewed chats when forwarding */
 .bp_LeftPanel:has(div:nth-child(4) > * > .mx_EventTile_messageOut) > *:nth-child(2) ~ .bp_LeftPanel_contentWrapper--search {
     --offset: -98% !important;
 }
@@ -74,11 +74,6 @@ div.noselect:first-of-type:not([class$="noselect"]) ~ .bp_LeftPanel > div:nth-ch
 div.noselect:first-of-type[class$="noselect"] ~ .bp_LeftPanel > div:nth-child(1) {
     margin-left: 33px;
     transition: all .1s linear;
-}
-
-/* Align Chat app sidebar */
-.bp_TitleBar ~ .mx_MatrixChat > div:nth-child(1) > div:nth-child(2) {
-    margin-top: 8px;
 }
 
 /* Set min width for side panel */
@@ -128,4 +123,8 @@ div.noselect:first-of-type[class$="noselect"] ~ .bp_LeftPanel > div:nth-child(1)
 
 .bp_TitleBar ~ .mx_MatrixChat > div:nth-child(1) > div:nth-child(1) {
     width:35px;
+}
+
+.bp_col {
+    margin-top: 5px !important;
 }
