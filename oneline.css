@@ -78,5 +78,8 @@ div.noselect:first-of-type[class$="noselect"] ~ .bp_LeftPanel > div:nth-child(1)
 /* Searchbar & Pen icon */
 .bp_LeftPanel > *:nth-child(2) {
     width:auto;
+}
 
+.bp_col {
+    margin-top: 5px !important;
 }
