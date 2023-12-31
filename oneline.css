@@ -72,7 +72,7 @@ div.noselect:first-of-type[class$="noselect"] ~ .bp_LeftPanel > div:nth-child(1)
 /* Set min width for side panel */
 /* Prevents searchbar getting smushed */
 .bp_LeftPanel {
-    min-width: 350;
+    min-width: 350px;
 }
 
 /* Searchbar & Pen icon */
